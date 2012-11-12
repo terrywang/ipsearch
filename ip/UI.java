@@ -1,6 +1,6 @@
 /*
- * 创建日期 2004-10-9
- * 作者 terry
+ * Creation date 2004-10-9
+ * terry
  */
 package ip;
 
