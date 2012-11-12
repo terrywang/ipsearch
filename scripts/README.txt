@@ -1,17 +1,16 @@
-﻿IP Search Verion 1.1 Build 20080101 What’s New
-=======================================
+﻿IP Search Verion 1.1 Build 20080101 What's New
 
-【说明】
+Update
 来自纯真的 IP 数据库格式有变化，若使用最新版本的 QQWry.dat 将无法反向查，也不打算再研究解决问题了，学不到什么东西了，也没有人会用。没有价值的事情就不做了。
 
-程序在在切换某些Look and Feel的时候没有标题框，不过Metal和Alloy下都是正常的。下一版准备加设置面板设置一些常用设置。参考JFC Demo优化代码，加入-Dcom.sun.management.jmxremote参数，可以用jconsole以及1.6.0_07加入的jvisualvm监控。Jconsole直接可以detect到，如果没有发现可以用jps查看当前jvm的pid。
+程序在在切换某些 Look and Feel 的时候没有标题框，Metal 和 Alloy 下都是正常的。下一版准备加设置面板设置一些常用设置。参考JFC Demo优化代码，加入 -Dcom.sun.management.jmxremote 参数，可以用 jconsole 以及 1.6.0_07 加入的 jvisualvm 监控。Jconsole直接可以detect到，如果没有发现可以用jps查看当前jvm的pid。
 
-此程序是我研究LumaQQ而写的一个小程序，类似于纯真版IP数据包带的工具 showip.exe 类似，只不过这个是 Java SWing 实现，理论上可以 Write once, run everywhere！
+此程序是研究 LumaQQ source code 写的一个小程序，类似于纯真版 IP 数据包带的工具 showip.exe 类似，只不过这个是 Java Swing 实现，理论上 Write once, run everywhere！
 
 目前有些功能没有时间完成，仅仅做了根据IP查地理位置和根据地理位置查IP地址段。目前是基于 Swing 的 UI，SWT 的改写计划无限期推后。
 
 TODO:
-About 中显示所有JVM相关环境变量，权当是一个检查系统变量的工具用了:-)
+About 中显示所有 JVM 相关环境变量，权当是一个检查系统变量的工具用了:-)
 
 【使用自定义IP地址数据库】
 现在改写了程序，利用配置文件可以自定义QQWry.dat所在的位置，比如你有显示IP的QQ各种版本你可以设置为安装目录下的 QQWry.dat，只要在 ipsearch.conf 中修改。
@@ -19,11 +18,11 @@ About 中显示所有JVM相关环境变量，权当是一个检查系统变量�
 需要注意 Windows 上，如果是 S:\QQ2003\QQWry.dat，你就需要修改成 S:\\QQ2003\\QQWry.dat，因为\在java中是转义符号，两个\\才表示Windows下的目录分隔符。
 
 【切换语言说明】
-修改安装目录下ipsearch.conf配置文件，把locale = Locale.CHINESE这个key-value对中的值修改成指定的值，然后重新启动程序即可。
+修改安装目录下 ipsearch.conf 配置文件，把 locale = Locale.CHINESE 这个 key-value 对中的值修改成指定的值，然后重新启动程序即可。
 简体中文   locale = Locale.CHINESE
 英文   locale = Locale.CHINESE
 
-在主程序中通过菜单动态刷新语言，暂时没有时间研究实现。
+在主程序中通过菜单动态刷新语言，暂时没有时间研究实现 -_-z
 
 native2ascii [-reverse] [-encoding encoding] [inputfile [outputfile]]
 例子
@@ -35,15 +34,11 @@ native2ascii -reverse -encoding Big5 Native2ASCII_zh_CN.properties Native2ASCII_
 【系统需求】
 Linux
 适用于所有的 Linux 发行版本，x86 以及 x86_64。2.4, 2.6+ 内核。
-经过测试的发行版本，Fedora, Debian, Ubuntu, Mandrake, Slackware。
-
 需要JRE或者JDK 1.4以上的支持。推荐使用JDK 1.5，在Linux下完美显示中文。
 
-Mac OS X
-10.4 Tiger, 10.5 Leopard, Intel and PPC.
+Mac OS X 10.5^ Intel
 
-Windows x86/x64
-98/98 SE/Me/2000/XP/Server 2003/Vista/Server 2008/Windows 7
+Windows
 
 【如何运行】
 GNU/Linux
@@ -68,7 +63,7 @@ http://terry.im
 http://terrywang.net/archives/83
 
 【感谢】
-感谢 LumaQQ 小组的优质代码和stubma老大的帮助。还有纯真网络奉献的IP数据。
+感谢 LumaQQ 小组的优质代码和 stubma 的帮助。还有纯真网络奉献的IP数据。
 
 ■ 历史记录
 [2009.05.01]
@@ -84,9 +79,8 @@ http://terrywang.net/archives/83
 1. 修正了一些bug，美化了一些字体显示。
 
 【2004.9.30】
-1. 修正了程序在jdk1.5上的bug
-2. 加入实时改变Look & Feel的功能
-3. 纪念祖国的55周年国庆
+1. 修正了程序在 JDK 1.5 上的bug
+2. 加入实时改变 Look & Feel 的功能
 
 【2004.9.28】
 1. 基本实现了资源的国际化
@@ -98,7 +92,7 @@ http://terrywang.net/archives/83
 
 【2004.8.29】
 1. 发现一个大bug，导致无法正确读取IP数据文件。现用用配置文件的方法加以修正，下一版中会有更好的解决方案。
-2. 增加了Linux下的执行脚本。
+2. 增加了 Linux 下的执行脚本。
 	
 【2004.7.12】
 1. 初始发布
@@ -139,11 +133,8 @@ To be honest this was my first attempt to implement a swing application using MV
 
 System Requirements:
 Operating sytems:
-GNU/Linux (Tested on RHEL, Fedora Core, Ubuntu, SUSE)
+GNU/Linux
 Mac OS X
-10.4^ Tiger, 10.5.x Leopard, Intel and PPC.
 Microsoft Windows
-98/2000/XP, Server 2003, Vista, Server 2008, Windows 7, it really doesn't matter what the version is...
 Sun Solaris
-9/10
-Java Runtime Environment: Sun JRE 1.4.2_05^, JRE 1.5.0_03^ JRE 1.6.0_07^
+Java Runtime Environment: JRE 1.5.0_03^ JRE 1.6.0_07^ JRE 1.7.0_07^
